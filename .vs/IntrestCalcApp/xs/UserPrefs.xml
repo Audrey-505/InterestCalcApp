@@ -1,0 +1,5 @@
+﻿<Properties StartupConfiguration="{92EBADE9-E5AC-49E2-BE01-E450DAA5DED4}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.InterestCalcAppTests FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.InterestCalcApp PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
+</Properties>
