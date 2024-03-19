@@ -1,0 +1,15 @@
+/Users/audreyalcantara/Documents/Sandboxing/InterestCalcApp/InterestCalcApp/obj/Debug/net8.0/InterestCalcApp.GeneratedMSBuildEditorConfig.editorconfig
+/Users/audreyalcantara/Documents/Sandboxing/InterestCalcApp/InterestCalcApp/obj/Debug/net8.0/InterestCalcApp.AssemblyInfoInputs.cache
+/Users/audreyalcantara/Documents/Sandboxing/InterestCalcApp/InterestCalcApp/obj/Debug/net8.0/InterestCalcApp.AssemblyInfo.cs
+/Users/audreyalcantara/Documents/Sandboxing/InterestCalcApp/InterestCalcApp/obj/Debug/net8.0/InterestCalcApp.csproj.CoreCompileInputs.cache
+/Users/audreyalcantara/Documents/Sandboxing/InterestCalcApp/InterestCalcApp/obj/Debug/net8.0/InterestCalcApp.sourcelink.json
+/Users/audreyalcantara/Documents/Sandboxing/InterestCalcApp/InterestCalcApp/bin/Debug/net8.0/InterestCalcApp
+/Users/audreyalcantara/Documents/Sandboxing/InterestCalcApp/InterestCalcApp/bin/Debug/net8.0/InterestCalcApp.deps.json
+/Users/audreyalcantara/Documents/Sandboxing/InterestCalcApp/InterestCalcApp/bin/Debug/net8.0/InterestCalcApp.runtimeconfig.json
+/Users/audreyalcantara/Documents/Sandboxing/InterestCalcApp/InterestCalcApp/bin/Debug/net8.0/InterestCalcApp.dll
+/Users/audreyalcantara/Documents/Sandboxing/InterestCalcApp/InterestCalcApp/bin/Debug/net8.0/InterestCalcApp.pdb
+/Users/audreyalcantara/Documents/Sandboxing/InterestCalcApp/InterestCalcApp/obj/Debug/net8.0/InterestCalcApp.dll
+/Users/audreyalcantara/Documents/Sandboxing/InterestCalcApp/InterestCalcApp/obj/Debug/net8.0/refint/InterestCalcApp.dll
+/Users/audreyalcantara/Documents/Sandboxing/InterestCalcApp/InterestCalcApp/obj/Debug/net8.0/InterestCalcApp.pdb
+/Users/audreyalcantara/Documents/Sandboxing/InterestCalcApp/InterestCalcApp/obj/Debug/net8.0/InterestCalcApp.genruntimeconfig.cache
+/Users/audreyalcantara/Documents/Sandboxing/InterestCalcApp/InterestCalcApp/obj/Debug/net8.0/ref/InterestCalcApp.dll

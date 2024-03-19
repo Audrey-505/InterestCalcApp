@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{676BCE6D-3CA9-4496-9C8A-595277428043}|Default">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints />
+  <MonoDevelop.Ide.Workbench ActiveDocument="IntrestCalcAppTests/UnitTest1.cs">
+    <Files>
+      <File FileName="IntrestCalcApp/Program.cs" Line="12" Column="34" />
+      <File FileName="IntrestCalcAppTests/UnitTest1.cs" Line="13" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__" />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="IntrestCalcApp" expanded="True">
+            <Node name="InterestCalcAppTests" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.InterestCalcAppTests FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.InterestCalcApp PreferredExecutionTarget="MonoDevelop.Default" FirstBuild="True" />
+</Properties>
