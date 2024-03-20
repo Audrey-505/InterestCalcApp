@@ -72,5 +72,43 @@ public class InterestCalcTests
         int parsedValue = app.ValidateLength(response);
         Assert.Equal(5, parsedValue);
     }
+
+    [Fact]
+    public void FindTotal()
+    {
+        InterestCalc app = new();
+        string principleInput = "200\n13\n5";
+        var inputStream = new StringReader(principleInput);
+        Console.SetIn(inputStream);
+        int calculation = app.Calculate();
+        int expected = 200 + (200 * 13 / 100 * 5);
+        Assert.Equal(expected, calculation);
+    }
+
+    //[Fact]
+    //public void CompoundInterest()
+    //{
+    //    InterestCalc app = new();
+    //    string userInput = "200\n13\n5";
+    //    var inputStream = new StringReader(userInput);
+    //    Console.SetIn(inputStream);
+    //    int calculation = app.CompoundInterest();
+    //    int expected = 200 * 13 / 100 * 5;
+    //    Assert.Equal(expected, calculation);
+    //}
+
+    //[Fact]
+    //public void CompoundInterest()
+    //{
+    //    InterestCalc app = new();
+    //    string userInput = "200\n13\n5";
+    //    var inputStream = new StringReader(userInput);
+    //    Console.SetIn(inputStream);
+    //    string userInputString = app.PromptPrinciple();
+    //    int userInputNum = app.ValidatePrinciple(userInputString);
+    //    int calculation = app.CompoundRound2(userInputNum);
+    //    int expected = 200 * 13 / 100 * 5;
+    //    Assert.Equal(expected, calculation);
+    //}
 }
  
