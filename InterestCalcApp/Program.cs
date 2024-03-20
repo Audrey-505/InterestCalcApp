@@ -29,7 +29,6 @@ public class InterestCalc
 
     public int ValidatePrinciple(string UserInput)
     {
-        //string principle = PromptPrinciple();
         if (!string.IsNullOrEmpty(UserInput) && UserInput.All(char.IsDigit))
         {
             int value = int.Parse(UserInput);
@@ -41,7 +40,6 @@ public class InterestCalc
 
     public int ValidateInterest(string UserInput)
     {
-        //string interest = PromptInterest();
         if (!string.IsNullOrEmpty(UserInput) && UserInput.All(char.IsDigit))
         {
             int value = int.Parse(UserInput);
@@ -53,7 +51,6 @@ public class InterestCalc
 
     public int ValidateLength(string UserInput)
     {
-        //string length = PromptLength();
         if (!string.IsNullOrEmpty(UserInput) && UserInput.All(char.IsDigit))
         {
             int value = int.Parse(UserInput);
@@ -62,6 +59,39 @@ public class InterestCalc
         Console.WriteLine("Invalid input please enter a number value");
         return 0;
     }
+
+    //public int CompoundInterest()
+    //{
+    //    string principlePromptResult = PromptPrinciple();
+    //    int principle = ValidatePrinciple(principlePromptResult);
+    //    string interestPromptResult = PromptInterest();
+    //    int interest = ValidateInterest(interestPromptResult);
+    //    string lengthPromptResult = PromptLength();
+    //    int length = ValidateLength(lengthPromptResult);
+    //    int result = principle * interest / 100 * length;
+    //    return result;
+    //}
+
+    public int Calculate()
+    {
+        string principlePromptResult = PromptPrinciple();
+        int principle = ValidatePrinciple(principlePromptResult);
+        string interestPromptResult = PromptInterest();
+        int interest = ValidateInterest(interestPromptResult);
+        string lengthPromptResult = PromptLength();
+        int length = ValidateLength(lengthPromptResult);
+        int result = principle + (principle * interest / 100 * length);
+        //CompoundRound2(principle);
+        return result;
+
+    }
+
+    public int CompoundRound2(int principle)
+    {
+        int total = Calculate();
+        int compound = total - principle;
+        return compound;
+    }
 }
 
 class Program
@@ -69,8 +99,10 @@ class Program
     static void Main(string[] args)
     {
         InterestCalc calculator = new();
-        string principle = calculator.PromptPrinciple();
-
-        Console.WriteLine($"Entered principle amount: {principle}");
+        //string userInputString = calculator.PromptPrinciple();
+        //int userInputNum = calculator.ValidatePrinciple(userInputString);
+        //int compoundInterest = calculator.CompoundRound2(userInputNum);
+        int total = calculator.Calculate();
+        Console.WriteLine($"total after interest: {total}, total compound interest:");
     }
 }
