@@ -13,66 +13,24 @@ namespace InterestCalcApp.Tests
         }
 
         [Fact]
-        public void PromptPrinciple_GetsDataBack()
+        public void Prompt_GetsDataBack()
         {
-            string testInput = "200";
-            var inputStream = new StringReader(testInput);
+            string expectedInput = "100";
+            var inputStream = new StringReader(expectedInput);
             Console.SetIn(inputStream);
-            var userInput = app.PromptPrinciple();
-            Assert.Equal(testInput, userInput);
+            int actualInput = InterestCalc.Prompt("principle");
+            Assert.Equal(int.Parse(expectedInput), actualInput);
         }
 
-        [Fact]
-        public void PromptIntrest_GetsDataBack()
+        [Theory]
+        [InlineData("100", 100)]
+        [InlineData("abc", 0)]
+        [InlineData("", 0)]
+        [InlineData(null, 0)]
+        public void Validate_CheckNotNullAndInt(string userInput, int expected)
         {
-            string testInput = "13";
-            var inputStream = new StringReader(testInput);
-            Console.SetIn(inputStream);
-            var userInput = app.PromptInterest();
-            Assert.Equal(testInput, userInput);
-        }
-
-        [Fact]
-        public void PromptLength_GetsDataBack()
-        {
-            string testInput = "5";
-            var inputStream = new StringReader(testInput);
-            Console.SetIn(inputStream);
-            var userInput = app.PromptLength();
-            Assert.Equal(testInput, userInput);
-        }
-
-        [Fact]
-        public void ValidateInput_Principle()
-        {
-            var testInput = "200";
-            var inputStream = new StringReader(testInput);
-            Console.SetIn(inputStream);
-            string response = app.PromptPrinciple();
-            int parsedValue = InterestCalc.ValidatePrinciple(response);
-            Assert.Equal(200, parsedValue);
-        }
-
-        [Fact]
-        public void ValidateInput_Interest()
-        {
-            var testInput = "13";
-            var inputStream = new StringReader(testInput);
-            Console.SetIn(inputStream);
-            string response = app.PromptInterest();
-            int parsedValue = InterestCalc.ValidateInterest(response);
-            Assert.Equal(13, parsedValue);
-        }
-
-        [Fact]
-        public void ValidateInput_Length()
-        {
-            var testInput = "5";
-            var inputStream = new StringReader(testInput);
-            Console.SetIn(inputStream);
-            string response = app.PromptLength();
-            int parsedValue = InterestCalc.ValidateLength(response);
-            Assert.Equal(5, parsedValue);
+            int result = InterestCalc.Validate(userInput);
+            Assert.Equal(expected, result);
         }
 
         [Fact]

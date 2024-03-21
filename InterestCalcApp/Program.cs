@@ -1,4 +1,6 @@
 ﻿
+using System.Text.RegularExpressions;
+
 namespace InterestCalcApp
 {
 
@@ -10,63 +12,23 @@ namespace InterestCalcApp
 
         public void PromptValues()
         {
-            PromptPrinciple();
-            PromptInterest();
-            PromptLength();
+            principle = Prompt("principle");
+            interest = Prompt("interest");
+            length = Prompt("length of rate in years");
         }
 
-        public string PromptPrinciple()
+        public static int Prompt(string promptMessage)
         {
-            Console.WriteLine("Please enter principle amount");
+            Console.WriteLine($"Please enter {promptMessage} amount");
             string? response = Console.ReadLine();
-            principle = ValidatePrinciple(response);
-            return response;
+            return Validate(response);
         }
 
-        public string PromptInterest()
+        public static int Validate(string userInput)
         {
-            Console.WriteLine("Please enter interest amount");
-            string? response = Console.ReadLine();
-            interest = ValidateInterest(response);
-            return response;
-        }
-
-        public string PromptLength()
-        {
-            Console.WriteLine("Please enter the length of rate in years");
-            string? response = Console.ReadLine();
-            length = ValidateLength(response);
-            return response;
-        }
-
-        public static int ValidatePrinciple(string UserInput)
-        {
-            if (!string.IsNullOrEmpty(UserInput) && UserInput.All(char.IsDigit))
+            if (!string.IsNullOrEmpty(userInput) && userInput.All(char.IsDigit))
             {
-                int value = int.Parse(UserInput);
-                return value;
-            }
-            Console.WriteLine("Invalid input please enter a number value");
-            return 0;
-        }
-
-        public static int ValidateInterest(string UserInput)
-        {
-            if (!string.IsNullOrEmpty(UserInput) && UserInput.All(char.IsDigit))
-            {
-                int value = int.Parse(UserInput);
-                return value;
-            }
-            Console.WriteLine("Invalid input please enter a number value");
-            return 0;
-        }
-
-        public static int ValidateLength(string UserInput)
-        {
-            if (!string.IsNullOrEmpty(UserInput) && UserInput.All(char.IsDigit))
-            {
-                int value = int.Parse(UserInput);
-                return value;
+                return int.Parse(userInput);
             }
             Console.WriteLine("Invalid input please enter a number value");
             return 0;
