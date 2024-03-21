@@ -4,10 +4,16 @@ namespace InterestCalcAppTests;
 
 public class InterestCalcTests
 {
+    private readonly InterestCalc app;
+
+    public InterestCalcTests()
+    {
+        app = new InterestCalc();
+    }
+
     [Fact]
     public void PromptPrinciple_GetsDataBack()
     {
-        InterestCalc app = new();
         string testInput = "200";
         var inputStream = new StringReader(testInput);
         Console.SetIn(inputStream);
@@ -18,7 +24,6 @@ public class InterestCalcTests
     [Fact]
     public void PromptIntrest_GetsDataBack()
     {
-        InterestCalc app = new();
         string testInput = "13";
         var inputStream = new StringReader(testInput);
         Console.SetIn(inputStream);
@@ -29,7 +34,6 @@ public class InterestCalcTests
     [Fact]
     public void PromptLength_GetsDataBack()
     {
-        InterestCalc app = new();
         string testInput = "5";
         var inputStream = new StringReader(testInput);
         Console.SetIn(inputStream);
@@ -40,7 +44,6 @@ public class InterestCalcTests
     [Fact]
     public void ValidateInput_Principle()
     {
-        InterestCalc app = new();
         var testInput = "200";
         var inputStream = new StringReader(testInput);
         Console.SetIn(inputStream);
@@ -52,7 +55,6 @@ public class InterestCalcTests
     [Fact]
     public void ValidateInput_Interest()
     {
-        InterestCalc app = new();
         var testInput = "13";
         var inputStream = new StringReader(testInput);
         Console.SetIn(inputStream);
@@ -64,7 +66,6 @@ public class InterestCalcTests
     [Fact]
     public void ValidateInput_Length()
     {
-        InterestCalc app = new();
         var testInput = "5";
         var inputStream = new StringReader(testInput);
         Console.SetIn(inputStream);
@@ -83,12 +84,6 @@ public class InterestCalcTests
             length = 5
         };
         Assert.Equal(200 + (200 * 13 / 100 * 5), app.Calculate());
-        //string principleInput = "200\n13\n5";
-        //var inputStream = new StringReader(principleInput);
-        //Console.SetIn(inputStream);
-        //int calculation = app.Calculate();
-        //int expected = 200 + (200 * 13 / 100 * 5);
-        //Assert.Equal(expected, calculation);
     }
 
     [Fact]
