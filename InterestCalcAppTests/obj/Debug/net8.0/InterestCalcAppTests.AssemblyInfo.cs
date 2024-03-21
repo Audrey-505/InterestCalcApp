@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InterestCalcAppTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1822c5944dd64634fb08748be7108791c6ae2d22")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09165ec0c5f256c45d60ea369ee62d20619c4d1f")]
 [assembly: System.Reflection.AssemblyProductAttribute("InterestCalcAppTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InterestCalcAppTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
