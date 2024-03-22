@@ -9,7 +9,12 @@ namespace InterestCalcApp.Tests
 
         public InterestCalcTests()
         {
-            app = new InterestCalc();
+            app = new InterestCalc()
+            {
+                principle = 200,
+                interest = 13,
+                length = 5
+            };
         }
 
         [Fact]
@@ -36,24 +41,12 @@ namespace InterestCalcApp.Tests
         [Fact]
         public void FindTotal()
         {
-            InterestCalc app = new()
-            {
-                principle = 200,
-                interest = 13,
-                length = 5
-            };
             Assert.Equal(200 + (200 * 13 / 100 * 5), app.Calculate());
         }
 
         [Fact]
         public void FindCompound()
         {
-            InterestCalc app = new()
-            {
-                principle = 200,
-                interest = 13,
-                length = 5
-            };
             Assert.Equal(200 * 13 / 100 * 5, app.CompoundInterest());
         }
     }
