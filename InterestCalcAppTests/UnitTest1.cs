@@ -29,14 +29,21 @@ namespace InterestCalcApp.Tests
 
         [Theory]
         [InlineData("100", 100)]
-        [InlineData("abc", 0)]
-        [InlineData("", 0)]
-        [InlineData(null, 0)]
-        public void Validate_CheckNotNullAndInt(string userInput, int expected)
+        public void Validate_ValidInput_ReturnsInt(string userInput, int expected)
         {
             int result = InterestCalc.Validate(userInput);
             Assert.Equal(expected, result);
         }
+
+        [Theory]
+        [InlineData("abc")]
+        [InlineData("")]
+        [InlineData(null)]
+        public void Validate_InvalidInput_ThrowsArgumentException(string userInput)
+        {
+            Assert.Throws<ArgumentException>(() => InterestCalc.Validate(userInput));
+        }
+
 
         [Fact]
         public void FindTotal()

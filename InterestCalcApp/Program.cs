@@ -12,9 +12,17 @@ namespace InterestCalcApp
 
         public void PromptValues()
         {
-            principle = Prompt("principle");
-            interest = Prompt("interest");
-            length = Prompt("length of rate in years");
+            try
+            {
+                principle = Prompt("principle");
+                interest = Prompt("interest");
+                length = Prompt("length of rate in years");
+            }
+            catch(ArgumentException ex)
+            {
+                Console.WriteLine(ex.Message);
+                PromptValues();
+            }
         }
 
         public static int Prompt(string promptMessage)
@@ -30,8 +38,7 @@ namespace InterestCalcApp
             {
                 return int.Parse(userInput);
             }
-            Console.WriteLine("Invalid input please enter a number value");
-            return 0;
+            throw new ArgumentException("Invalid input. Please enter a valid number value.");
         }
 
         public int Calculate()
